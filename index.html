@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <header class="text-center bg-success text-light" > 
+    <header class="text-center bg-primary text-light" > 
         <h1>Weather Forecast</h1>
     </header>
     <main>
@@ -16,22 +16,22 @@
             <section class="col-3">
                 <div class="input-group mb-3 px-3 my-2">
                    <h3>Search for a City:</h3> 
-                    <input type="text" class="form-control w-100 my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <input id= "searchInput" type="text" class="form-control w-100 my-3" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     <button class="btn btn-primary w-100 " id="Search">Search</button>
                 </div>
-                <ul class="list-group text-center px-3 ">
-                    <li class="list-group-item my-1 bg-dark-subtle">Boston</li>
-                    <li class="list-group-item my-1 bg-dark-subtle">Saint Marys</li>
-                    <li class="list-group-item my-1 bg-dark-subtle">Grand Rapids</li>
+                <ul id="weatherContainer" class="list-group text-center px-3 ">
+                    <li class="list-group-item my-1 bg-dark-subtle"></li>
+                    <li class="list-group-item my-1 bg-dark-subtle"></li>
+                    <li class="list-group-item my-1 bg-dark-subtle"></li>
                     </ul>
             </section>
 
             <section class="col-9">
                 <div class="p-1 my-2 bg-body-tertiary rounded-3">
-                    <div class="container-fluid py-2">
-                      <h4 class=" fw-bold">Saint Marys 1/10/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h4>
+                    <div id= "Dashboard" class="container-fluid py-2">
+                      <h4 class=" fw-bold"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h4>
                       <ul class="col-md-8 fs-4"></ul>
-                      <li class="list-group-item my-1">Temperature:</li>
+                      <li class="list-group-item my-1">Temperature:°</li>
                       <li class="list-group-item my-1">Wind:</li>
                       <li class="list-group-item my-1">Humidity:</li>
                       
@@ -43,45 +43,55 @@
                     <div class="col-sm-2 mb-3 mb-sm-0">
                       <div class="card">
                         <div class="card-body">
-                          <h5 class="card-title">1/11/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="card-title"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
+                          <ul class="col-md-8 fs-4"></ul>
+                      <li class="list-group-item my-1">Temperature:°</li>
+                      <li class="list-group-item my-1">Wind:</li>
+                      <li class="list-group-item my-1">Humidity:</li>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-2">
                       <div class="card">
                         <div class="card-body">
-                          <h5 class="card-title">1/12/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
-                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h5 class="image"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
+                          <ul class="col-md-8 fs-4"></ul>
+                      <li class="list-group-item my-1">Temperature:°</li>
+                      <li class="list-group-item my-1">Wind:</li>
+                      <li class="list-group-item my-1">Humidity:</li>
                         </div>
                       </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">1/13/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="image"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
+                            <ul class="col-md-8 fs-4"></ul>
+                            <li class="list-group-item my-1">Temperature:°</li>
+                            <li class="list-group-item my-1">Wind:</li>
+                            <li class="list-group-item my-1">Humidity:</li>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">1/14/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="image"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
+                            <ul class="col-md-8 fs-4"></ul>
+                      <li class="list-group-item my-1">Temperature:°</li>
+                      <li class="list-group-item my-1">Wind:</li>
+                      <li class="list-group-item my-1">Humidity:</li>
                           </div>
                         </div>
                       </div>
                       <div class="col-sm-2">
                         <div class="card">
                           <div class="card-body">
-                            <h5 class="card-title">1/15/2024 <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="image"> <img src="https://openweathermap.org/img/wn/10d@2x.png" alt=""></h5>
+                            <ul class="col-md-8 fs-4"></ul>
+                      <li class="list-group-item my-1">Temperature:°</li>
+                      <li class="list-group-item my-1">Wind:</li>
+                      <li class="list-group-item my-1">Humidity:</li>
                           </div>
                         </div>
                       </div>

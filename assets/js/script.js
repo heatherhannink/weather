@@ -37,21 +37,6 @@ const getWeatherForecast = async function (url) {
 //Function to get weather for the cities 
 const GetWeatherInfo = async (cityName) => {
 
-//container to store the city searched temp, humidity and wind speed for the next 5 days
-container.innerHTML += `<div class='icons'>
-<p class='weather' id='day1'></p>
-<p class='date' id='day1Date'>${dayjs.unix(data2.list[i].dt).format('MM/DD/YYYY')}</p>
-
-<p class='temp' id='day1Temp'>Temp: ${data2.list[i].main.temp} °F</p>
-<p class='humidity' id='humidity'>Humidity: ${data2.list[i].main.humidity}%</p>
-<p class='windSpeed' id='windSpeed'>Wind Speed: ${data2.list[i].wind.speed} MPH</p>
-</div>`
-
-
-
-
-
-
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}&units=imperial`;
     const response2 = await fetch (url);
     var data=response2.json()

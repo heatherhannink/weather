@@ -1,11 +1,11 @@
 const APIKey = "14899decffe0ccf6cbb995782f2d053d";
 const searchInput =document.getElementById('searchInput');
-// const currentDay = new date();
+//const currentDay = new date();
 const searchBtn = document.getElementById('Search');
 const container = document.getElementById('weatherContainer');
 const Dashboard = document.getElementById('Dashboard');
 let city = document.getElementById('searchInput');
-
+const fiveDayCard = document.getElementById('Five-Day-Card')
 const GetCityInfo = async (url) => {
   Dashboard.textContent=""
     const response1 = await fetch(url);
@@ -39,15 +39,15 @@ const GetWeatherInfo = async (cityName) => {
 
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APIKey}&units=imperial`;
     const response2 = await fetch (url);
-    var data=response2.json()
+    var data1= await response2.json()
     container.textContent = ""
-    console.log (data)
-    for (let i = 2; i<data.list.length; i = i+8){
+    console.log (data1)
+    fiveDayCard.textContent=""
+    for (let i = 2; i < data1.list.length; i = i+8){
+//fiveDayCard.innerHTML=fiveDayCard.innerHTML+ 
+  //  }   
 
     }
-
-    
-}
 
 
   searchBtn.addEventListener('click', () => {
@@ -57,7 +57,7 @@ const GetWeatherInfo = async (cityName) => {
   });
   const saveCitySearch = () => {
     let citySearches = JSON.parse(localStorage.getItem('citySearches')) || [];
-    citySearches.push(city);
+    citySearches.push(cityName);
     localStorage.setItem('citySearches', JSON.stringify(citySearches));
   }
   //Function created to render the buttons for the searched cities
@@ -74,8 +74,11 @@ const GetWeatherInfo = async (cityName) => {
       });
       cityButtonsContainer.appendChild(button);
     });
-    searchedCityButtons(citySearches);
+    
   };
+
+  
+
   const citySearches = JSON.parse(localStorage.getItem('citySearches')) || [];
   const button = document.getElementById('button-container');
   for (let i = 0; i < citySearches.length; i++) {
@@ -84,6 +87,7 @@ const GetWeatherInfo = async (cityName) => {
     button.classList.add('city-button');
     GetWeatherInfo(cities[i]);
     container.appendChild(button);
+    searchedCityButtons(citySearches);
   };
   
   console.log('Getting weather information for city:', city);
